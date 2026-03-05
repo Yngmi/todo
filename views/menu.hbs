@@ -1,0 +1,56 @@
+{{! views/menu.hbs }}
+<div class="row">
+    <div class="col s12">
+        <h4 class="teal-text">Здравствуйте, {{user.full_name}}!</h4>
+        
+        <!-- Кнопка добавления задачи -->
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large teal modal-trigger" href="#createTaskModal">
+                <i class="large material-icons">add</i>
+            </a>
+        </div>
+        
+        <!-- Список задач -->
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Мои задачи</span>
+                
+                <div id="tasksList" class="collection">
+                    <!-- Задачи будут загружаться сюда динамически через AJAX -->
+                    <div class="center-align grey-text">Загрузка задач...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно создания задачи -->
+<div id="createTaskModal" class="modal">
+    <div class="modal-content">
+        <h4>Создать новую задачу</h4>
+        <form id="createTaskForm">
+            <div class="input-field">
+                <input type="text" id="taskTitle" name="title" required>
+                <label for="taskTitle">Название задачи</label>
+            </div>
+            
+            <div class="input-field">
+                <textarea id="taskDescription" name="description" class="materialize-textarea"></textarea>
+                <label for="taskDescription">Описание</label>
+            </div>
+            
+            <div class="input-field">
+                <select id="parentTask" name="parent_id">
+                    <option value="" selected>Нет (корневая задача)</option>
+                    <!-- Родительские задачи будут загружаться сюда через AJAX -->
+                </select>
+                <label>Родительская задача</label>
+            </div>
+            
+            <div class="modal-footer">
+                <a href="#!" class="modal-close btn-flat">Отмена</a>
+                <button type="submit" class="btn teal">Создать</button>
+            </div>
+        </form>
+    </div>
+</div>

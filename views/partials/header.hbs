@@ -1,0 +1,24 @@
+{{! views/partials/header.hbs }}
+<nav class="teal">
+    <div class="nav-wrapper container">
+        <a href="/" class="brand-logo">Task Manager</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            {{#if user}}
+                <li><a href="/menu"><i class="material-icons left">home</i>Главная</a></li>
+                <li><a href="/auth/logout"><i class="material-icons left">exit_to_app</i>Выйти</a></li>
+            {{else}}
+                <li><a href="/auth/login"><i class="material-icons left">login</i>Войти</a></li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    {{#if user}}
+        <li><a href="/menu"><i class="material-icons left">home</i>Главная</a></li>
+        <li><a href="/auth/logout"><i class="material-icons left">exit_to_app</i>Выйти</a></li>
+    {{else}}
+        <li><a href="/auth/login"><i class="material-icons left">login</i>Войти</a></li>
+    {{/if}}
+</ul>

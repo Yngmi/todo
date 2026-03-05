@@ -1,0 +1,71 @@
+/* public/css/style.css */
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.task-item {
+    padding: 10px 20px !important;
+}
+
+.task-item.completed {
+    background-color: #e8f5e8;
+    text-decoration: line-through;
+    color: #666;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-actions i {
+    cursor: pointer;
+    color: #666;
+    margin-left: 10px;
+}
+
+.task-actions i:hover {
+    color: #f44336;
+}
+
+.task-description {
+    margin-left: 30px;
+    font-size: 0.9em;
+}
+
+.subtasks {
+    margin-left: 30px;
+    border-left: 2px solid #ddd;
+    padding-left: 10px;
+}
+
+/* Стили для модального окна */
+.modal {
+    max-height: 80%;
+    width: 600px;
+}
+
+/* Анимация для уведомлений */
+.toast {
+    border-radius: 4px;
+}
+
+/* Стили для кнопки добавления */
+.fixed-action-btn {
+    bottom: 45px;
+    right: 45px;
+}
+
+/* Стили для вкладок */
+.tabs .tab a {
+    color: #26a69a;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: #26a69a;
+}
+
+.tabs .indicator {
+    background-color: #26a69a;
+}
